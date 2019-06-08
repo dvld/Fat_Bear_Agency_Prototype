@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Fat Bear Agency</title>
+	<link rel="stylesheet" href="reset.css">
+	<link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Merienda|Unica+One&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://kit.fontawesome.com/30ca4f29c5.js"></script>
+</head>
+
+<body>
+
+	<nav class="navbar">
+
+		
+
+		<ul class="navbar-nav">
+			<li id="logo">
+				<img src="./images/cropped-fatbear-agency-white-79x72.jpg" />
+			</li>
+			<li>
+				<a href="https://www.fatbearcoworking.com/" target="_blank">Coworking</a>
+			</li>
+			<li>
+				<a href="https://fatbearprinting.com/" target="_blank">Printing</a>
+			</li>
+			<li>
+				<a href="https://greeksocials.com/" target="_blank">Greek Socials</a>
+			</li>
+		</ul>
+
+		<span class="open-menu">
+				<a href="#" onclick="openSideMenu()">
+					<svg width="30" height="30">
+						<path d="M0,5 30,5" stroke="#000" stroke-width="5" />
+						<path d="M0,14 30,14" stroke="#000" stroke-width="5" />
+						<path d="M0,23 30,23" stroke="#000" stroke-width="5" />
+					</svg>
+				</a>
+			</span>
+	</nav>
+
+	<div id="side-menu" class="side-nav">
+		<a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>
+		<a href="https://www.fatbearcoworking.com/" target="_blank">Coworking</a>
+		<a href="https://fatbearprinting.com/" target="_blank">Printing</a>
+		<a href="https://greeksocials.com/" target="_blank">Greek Socials</a>
+	</div>
+
+	<div id="header">
+		<h1>Fat Bear Agency</h1>
+	</div>
+
+	<div class="container">
+
+		<div class="card" id="coworking">
+			<img class="card-logo" alt="Fat Bear Coworking" src="./images/coworking-logo.png" />
+			<h2 class="card-title">Fat Bear Coworking</h2>
+			<p class="card-body">
+				Conveniently located in Downtown Dallas, Fat Bear Coworking offers a unique space designed to inspire young entrepreneurs. Providing luxury, affordability, and indespensible resources to aspiring business owners; Fat Bear Coworking delivers a motivated environment and all the tools necessary for success.
+			</p>
+			<a href="https://www.fatbearcoworking.com/" target="_blank">
+				<button id="coworking-button" class="card-button">
+					<i class="fas fa-angle-left"></i><span> Learn More </span><i class="fas fa-angle-right"></i>
+				</button>
+			</a>
+		</div>
+
+		<div class="card" id="printing">
+			<img src="images/official-printing-logo.png" alt="Fat Bear Printing" class="card-logo">
+			<h2 class="card-title">Fat Bear Printing</h2>
+			<p class="card-body">
+				Fat Bear Printing is the perfect place to look if you're in need of custom apparel or promotional products for your business. From T-shirts to watches, keyrings to flash drives, tumblers to swimwear; Fat Bear Printing has you covered. With incredible products and event better prices its the perfect one stop shop for any business.
+			</p>
+			<a href="https://fatbearprinting.com/" target="_blank">
+				<button id="printing-button" class="card-button">
+					<i class="fas fa-angle-left"></i> Learn More <i class="fas fa-angle-right"></i>
+				</button>
+			</a>
+		</div>
+
+		<div class="card" id="greek-socials">
+			<img src="images/greek-socials-logo.png" alt="Greek Socials" class="card-logo">
+			<h2 class="card-title">Greek Socials</h2>
+			<p class="card-body">
+				Focused on creating memorable experiences for every client and providing top-notch service at every event. Quality venues, world-famous artists, catering, production, security, transportation, and unrivaled service. If you're looking for an unforgettable experience, Greek Socials is the obvious and unbeatable choice.
+			</p>
+			<a href="https://greeksocials.com/" target="_blank">
+				<button id="socials-button" class="card-button">
+					<i class="fas fa-angle-left"></i> Learn More <i class="fas fa-angle-right"></i>
+				</button>
+			</a>
+		</div>
+
+	</div>
+
+	<footer>
+		<p>Fat Bear Agency © 2019 | Powered by God</p>
+	</footer>
+
+	<script>
+		function openSideMenu() {
+			document.getElementById('side-menu').style.width='200px';
+		}
+
+		function closeSideMenu() {
+			document.getElementById('side-menu').style.width='0px';
+		}
+	</script>
+</body>
+
+</html>

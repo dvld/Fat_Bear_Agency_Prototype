@@ -1,0 +1,347 @@
+
+/* Main Grid */
+/* ================================================= */
+
+/* Body */
+/* ==== */
+body {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: 10% 10% 1fr 15%;
+	grid-template-areas: 
+		"navbar"
+		"header"
+		"container"
+		"footer";
+	background: url(images/Fat-Bear-Design-1-01.svg) no-repeat;
+	background-size: cover;
+	font-family: 'Unica One', cursive;
+}
+/* ==== */
+
+
+
+	/* Navbar */
+	/* ========================= */
+
+	nav {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		justify-items: center;
+		align-items: center;
+		z-index: 10;
+		padding-right: 20px;
+		padding-top: 10px;
+		grid-area: navbar;
+		/* background-color: white; */
+	}
+
+		/* Nav Grid */
+		/* ======== */
+		nav ul {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			justify-items: center;
+			align-items: center;
+			list-style: none;
+		}
+		/* ======== */
+
+		/* Nav Areas */
+		/* ========= */
+		#logo {
+			grid-area: links;
+			margin-right: 10px;
+		}
+
+		#link1 {
+			grid-area: links;
+		}
+
+		#link2 {
+			grid-area: links;
+		}
+
+		#link3 {
+			grid-area: links;
+		}
+		/* ========= */
+
+		ul a {
+			font-size: 20px;
+			text-decoration: none;
+			color: #000000;
+			padding: 0 10px;
+		}
+
+		.navbar a:hover {
+			color: #285efe;
+			transition: 0.3s ease-out;
+		}
+
+		.side-nav {
+			height: 100%;
+			width: 0;
+			position: fixed;
+			z-index: 11;
+			top: 0;
+			right: 0;
+			background-color: #111111;
+			opacity: 0.9;
+			overflow-x: hidden;
+			padding-top: 10px;
+			transition: 0.5s ease-out;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.side-nav a {
+			padding: 10px 30px 10px 10px;
+			text-decoration: none;
+			font-size: 22px;
+			color: #ffffff;
+			transition: 0.3s;
+			text-align: right;
+		}
+
+		.side-nav a:hover {
+			color: #285efe;
+			transition: 0.3s ease-out;
+		}
+
+		.side-nav .btn-close {
+			/* position: absolute; */
+			/* right: 22px; */
+			font-size: 48px;
+		}
+
+
+	/* ========================= */
+
+
+
+	/* Header */
+	/* ========================= */
+
+	/* Header Flex */
+	/* =========== */
+	#header {
+		grid-area: header;
+		/* height: 72px; */
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		padding: 0 0 15px 150px;
+	}
+	/* =========== */
+
+		/* h1 in header */
+		/* ============ */
+		#header h1 {
+			/* margin-top: 100px; */
+			font-size: 72px;
+			color: #ffffff;
+			padding-bottom: 10px;
+			border-bottom: 2px solid #ffffff;
+		}
+		/* ============ */
+
+	/* ========================= */
+
+
+
+	/* Container */
+	/* ========================= */
+	.container {
+		grid-area: container;
+		padding: 30px 0 0;
+
+		/* Inner Grid */
+		/* ========== */
+		display: grid;
+		grid-template-columns: 100px 1fr 1fr 1fr 100px;
+		grid-template-rows: auto;
+		grid-template-areas: 
+			"... coworking printing socials ...";
+		justify-items: center;
+		margin-bottom: 20px;
+		/* ========== */
+	}
+
+		/* Container Areas */
+		/* =============== */
+		#coworking {
+			grid-area: coworking;
+			/* border: 2px solid blue; */
+		}
+
+		#printing {
+			grid-area: printing;
+			/* border: 2px solid blue; */
+		}
+
+		#greek-socials {
+			grid-area: socials;
+			/* border: 2px solid blue; */
+		}
+		/* =============== */
+
+	/* ========================= */
+
+
+
+	/* Card Grid */
+	/* ========================= */
+	.card {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 2fr 1fr 3fr 1fr;
+		grid-template-areas: 
+			"card-logo"
+			"card-title"
+			"card-body"
+			"card-button";
+		background-color: #0008;
+		border-radius: 5%;
+		/* border-top-right-radius: 25px;
+		border-bottom-left-radius: 25px; */
+		box-shadow: 5px 5px 120px 15px #000000;
+		/* border: none; */
+		padding: 20px;
+		justify-items: center;
+		width: 80%;
+	}
+
+		/* Card Areas */
+		/* ================== */
+
+		/* Card Logo */
+		/* ========= */
+		.card-logo {
+			grid-area: card-logo;
+			justify-self: center;
+			align-self: end;
+			width: 100px;
+		}
+		/* ========= */
+
+		/* Card Title */
+		/* ========== */
+		.card-title {
+			grid-area: card-title;
+			justify-self: center;
+			margin-top: 20px;
+			font-size: 28px;
+			color: #285efe;
+		}
+		/* ========== */
+
+		/* Card Body */
+		/* ========= */
+		.card-body {
+			grid-area: card-body;
+			justify-self: center;
+			margin: 20px;
+			font-size: 18px;
+			color: #ffffff;
+			text-align: center;
+		}
+		/* ========= */
+
+		/* Card Button */
+		/* =========== */
+		.card-button {
+			grid-area: card-button;
+			width: 120px;
+			height: 40px;
+			border-radius: 2px;
+			background-color: #285efe;
+			color: #ffffff;
+			border: none;
+		}
+		/* =========== */
+
+		/* ================== */
+
+	/* ========================= */
+
+
+
+	/* Footer */
+	/* ========================= */
+
+	footer {
+		grid-area: footer;
+		display: flex;
+		/* background-color: #ffffff; */
+		color: #285efe;
+		/* border-top: 2px solid #285efe; */
+		justify-content: flex-end;
+		align-items: flex-end;
+		margin-top: 100px;
+	}
+
+		/* Footer Text */
+		/* =========== */
+		footer p {
+			padding: 100px 50px 5px 50px;
+		}
+		/* =========== */
+
+	/* ========================= */
+
+
+@media(min-width: 1400px) {
+	.open-menu {
+		display: none;
+	}
+}
+
+@media(max-width: 1400px) {
+	ul a {
+		display: none;
+	}
+
+	.container {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: auto;
+		grid-template-areas: 
+			"coworking printing socials";
+	}
+}
+
+@media(max-width: 1220px) {
+	nav ul {
+		display: none;
+	}
+
+	.container {
+		margin-bottom: 200px;
+	}
+}
+
+@media(max-width: 768px) {
+	#header {
+		justify-content: center;
+		padding-left: 0;
+	}
+
+	#header h1 {
+		font-size: 48px;
+	}
+
+	.container {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		grid-template-areas: 
+			"coworking"
+			"printing"
+			"socials";
+	}
+
+	footer {
+		justify-content: center;
+	}
+}
