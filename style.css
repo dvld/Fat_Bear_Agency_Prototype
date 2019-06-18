@@ -15,8 +15,8 @@ body {
 		"footer";
 	background: url(images/Fat-Bear-Design-1-01.svg) no-repeat;
 	background-size: cover;
-	font-family: 'Unica One', cursive;
-}
+	font-family: 'Roboto Mono', monospace;
+ }
 /* ==== */
 
 
@@ -34,7 +34,6 @@ body {
 		padding-right: 20px;
 		padding-top: 10px;
 		grid-area: navbar;
-		/* background-color: white; */
 	}
 
 		/* Nav Grid */
@@ -51,7 +50,7 @@ body {
 
 		/* Nav Areas */
 		/* ========= */
-		#logo {
+		/* #logo {
 			grid-area: links;
 			margin-right: 10px;
 		}
@@ -66,7 +65,7 @@ body {
 
 		#link3 {
 			grid-area: links;
-		}
+		} */
 		/* ========= */
 
 		ul a {
@@ -167,6 +166,7 @@ body {
 			"... coworking printing socials ...";
 		justify-items: center;
 		margin-bottom: 20px;
+		/* padding: 120px 0; */
 		/* ========== */
 	}
 
@@ -203,11 +203,11 @@ body {
 			"card-title"
 			"card-body"
 			"card-button";
-		background-color: #0008;
-		border-radius: 5%;
+		/* background-color: #0008; */
+		/* border-radius: 5%; */
 		/* border-top-right-radius: 25px;
 		border-bottom-left-radius: 25px; */
-		box-shadow: 5px 5px 120px 15px #000000;
+		/* box-shadow: 5px 5px 120px 15px #000000; */
 		/* border: none; */
 		padding: 20px;
 		justify-items: center;
@@ -293,13 +293,16 @@ body {
 	/* ========================= */
 
 
-@media(min-width: 1400px) {
+/* media queries */
+/* ====================================================== */
+
+/* @media(min-width: 1496px) {
 	.open-menu {
 		display: none;
 	}
-}
+} */
 
-@media(max-width: 1400px) {
+@media(max-width: 1692px) {
 	ul a {
 		display: none;
 	}
@@ -312,7 +315,29 @@ body {
 	}
 }
 
-@media(max-width: 1220px) {
+@media(min-width: 1692px) {
+	.open-menu {
+		display: none;
+	}
+}
+
+@media(max-width: 1024px) {
+	.container {
+		grid-template-columns: 150px 1fr 150px;
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-areas:
+		"... coworking ..."
+		"... printing ..."
+		"... socials ...";
+	}
+
+	#header {
+		justify-content: center;
+		padding-left: 0;
+	}
+}
+
+@media(max-width: 1348px) {
 	nav ul {
 		display: none;
 	}
@@ -333,15 +358,60 @@ body {
 	}
 
 	.container {
-		grid-template-columns: 1fr;
+		grid-template-columns: 50px 1fr 50px;
 		grid-template-rows: auto;
 		grid-template-areas: 
-			"coworking"
-			"printing"
-			"socials";
+			"... coworking ..."
+			"... printing ..."
+			"... socials ...";
 	}
 
 	footer {
 		justify-content: center;
+	}
+}
+
+/* iPhone X */
+@media(max-width: 416px) {
+	body {
+		grid-template-rows: 3% 3% 1fr 10%;
+	}
+
+	.container {
+		grid-template-columns: 2% 1fr 2%;
+	}
+
+	.card {
+		width: 100%;
+	}
+
+	.card-title {
+		text-align: center;
+	}
+
+	#header h1 {
+		font-size: 32px;
+	}
+}
+
+@media(max-width: 360px) {
+	body {
+		grid-template-rows: 3% 2% auto 5%
+	}
+	
+	.container {
+		grid-template-columns: auto;
+	}
+
+	.card-title {
+		text-align: center;
+	}
+
+	#header h1 {
+		font-size: 32px;
+	}
+
+	.card {
+		width: 100%;
 	}
 }
